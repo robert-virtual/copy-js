@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Copy</title>
+    <style></style>
+  </head>
+  <body>
+    <h2>Copy</h2>
+    <p>The HTML <code>button</code> tag defines a clickable button.</p>
+    <code id="codigo" lang="js"> console.log("Hola mundo") </code>
+    <button id="btn" onclick="copy()">copy</button>
+    <hr />
+    <pre>
+        <code>
+            &lt;!doctype html&gt;
+            console.log("Hola mundo");
+        </code>
+    </pre>
+    <script>
+      const code = document.getElementById("codigo");
+      const btn = document.getElementById("btn");
+      btn.onclick = () => copy(code.textContent);
+
+      function copy(text) {
+        navigator.clipboard.writeText(text);
+      }
+    </script>
+  </body>
+</html>
